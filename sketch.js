@@ -9,25 +9,26 @@ function preload()
 }
 
 function setup() {
-    createCanvas(380, 480);
+    createCanvas(370, 510);
+    background('white');
     c = color('white');
     d = -50;
 }
 
 function draw() {
-    image(img, 0, 0);
+    image(img, 2, 26);
 
-    strokeWeight(1);
-    noStroke();
-    //stroke(255);
+    strokeWeight(2);
+    stroke(255);
     fill(c);
-    rect(width/4, 2, width/2, 20);
+    rect(1, 2, width-2, 20);
     var rgbV = c[0] + "," + c[1] + "," + c[2];
     fill(c[0]+d, c[1]+d, c[2]+d);
+    textSize(26);
     textAlign(CENTER);
     if (c[0]<255)
       {
-        text(rgbV , width/2, 32);
+        text(rgbV , width/2, 50);
       }
 }
 
