@@ -2,7 +2,6 @@
 var img;
 var c;
 var d;
-//var rgbValue;
 
 function preload()
 {
@@ -36,12 +35,4 @@ function mousePressed()
 {
     c = get(mouseX, mouseY);
 
-
-    // var particle = new Particle();
-    //particle.callFunction({
-       //deviceId: 'YOURDEVICEID',
-       //name: 'led',
-       //argument: rgbValue,
-       //auth: 'YOURAUTHVALUE'
-    //});
 }
