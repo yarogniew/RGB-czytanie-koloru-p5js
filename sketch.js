@@ -1,6 +1,7 @@
 /* P5JS CODE */
 var img;
 var c;
+var d;
 //var rgbValue;
 
 function preload()
@@ -11,6 +12,7 @@ function preload()
 function setup() {
     createCanvas(380, 480);
     c = color('white');
+    d = -50;
 }
 
 function draw() {
@@ -21,23 +23,25 @@ function draw() {
     //stroke(255);
     fill(c);
     rect(width/4, 2, width/2, 20);
-    //fill(255);
-    //text(rgbValue, 10, 10);
+    var rgbV = c[0] + "," + c[1] + "," + c[2];
+    fill(c[0]+d, c[1]+d, c[2]+d);
+    textAlign(CENTER);
+    if (c[0]<255)
+      {
+        text(rgbV , width/2, 32);
+      }
 }
 
 function mousePressed()
 {
     c = get(mouseX, mouseY);
 
-    var rgbValue = c[0] + "," + c[1] + "," + c[2];
-    print(rgbValue);
-    //fill(255);
-    //text(rgbValue, 10, 10, 70, 80);
-    var particle = new Particle();
-    particle.callFunction({
-       deviceId: 'YOURDEVICEID',
-       name: 'led',
-       argument: rgbValue,
-       auth: 'YOURAUTHVALUE'
-    });
+
+    // var particle = new Particle();
+    //particle.callFunction({
+       //deviceId: 'YOURDEVICEID',
+       //name: 'led',
+       //argument: rgbValue,
+       //auth: 'YOURAUTHVALUE'
+    //});
 }
