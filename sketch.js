@@ -29,7 +29,10 @@ function draw() {
     if (c[0]<255)
       {
         text(rgbV , width/2, 50);
-      }
+      }else{
+    fill('gray');
+    textSize(14);
+        text("Najedź myszką na kolor i kliknij", width/2, 20);}
 }
 
 function mousePressed()
