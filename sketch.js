@@ -1,6 +1,7 @@
 /* P5JS CODE */
 var img;
 var c;
+//var rgbValue;
 
 function preload()
 {
@@ -8,17 +9,20 @@ function preload()
 }
 
 function setup() {
-    createCanvas(640, 425);
-    c = color(255);
+    createCanvas(380, 480);
+    c = color('white');
 }
 
 function draw() {
     image(img, 0, 0);
 
-    strokeWeight(3);
-    stroke(255);
+    strokeWeight(1);
+    noStroke();
+    //stroke(255);
     fill(c);
-    rect(25, 25, 25, 25);
+    rect(width/4, 2, width/2, 20);
+    //fill(255);
+    //text(rgbValue, 10, 10);
 }
 
 function mousePressed()
@@ -27,7 +31,8 @@ function mousePressed()
 
     var rgbValue = c[0] + "," + c[1] + "," + c[2];
     print(rgbValue);
-
+    //fill(255);
+    //text(rgbValue, 10, 10, 70, 80);
     var particle = new Particle();
     particle.callFunction({
        deviceId: 'YOURDEVICEID',
